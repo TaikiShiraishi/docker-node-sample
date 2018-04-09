@@ -1,7 +1,7 @@
 FROM node:8.2-alpine
 
-WORKDIR /c/Users/tiki/sandbox/minimal-node
+ADD package.json .
+ADD index.js .
 
-RUN npm run start
+CMD npm run start
 
-ENTRYPOINT ["node", "index.js"]
